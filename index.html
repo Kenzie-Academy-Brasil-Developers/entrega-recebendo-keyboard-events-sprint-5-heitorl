@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #box { width: 100px; height: 100px; position: absolute; background: gray; left: 200px; top: 200px; }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+
+    <script>
+    'use strict';
+    let $box = document.getElementById("box");
+    let boxTop = 200;
+    let boxLeft = 200;
+    let $img = document.createElement('img')   
+    
+    $box.appendChild($img)
+    $box.style.backgroundColor ='transparent';
+    $img.src ='./pacman.svg.png';
+    $img.style.width = '100%';
+    
+    document.addEventListener('keydown', (event) => {
+      const keyName = event.key;
+    //   console.log('keydown event\n\n' + 'key: ' + keyName);
+        if(keyName === 'ArrowDown')
+            boxTop = boxTop + 10;
+        if(keyName === 'ArrowUp')
+            boxTop = boxTop - 10;        
+        if(keyName === 'ArrowRight')
+            boxLeft = boxLeft + 10;
+        if(keyName === 'ArrowLeft')
+            boxLeft = boxLeft - 10;
+        
+        $box.style.top = boxTop + "px";
+        $box.style.left = boxLeft + "px";
+        });
+
+    
+    </script>
+</body>
+</html>
