@@ -2,13 +2,12 @@
 <html>
 <head>
     <style>
+        body{background-color: black;}
         #box { width: 100px; height: 100px; position: absolute; background: gray; left: 200px; top: 200px; }
     </style>
 </head>
 <body>
     <div id="box"></div>
-
-
     <script>
     'use strict';
     let $box = document.getElementById("box");
@@ -35,9 +34,7 @@
         
         $box.style.top = boxTop + "px";
         $box.style.left = boxLeft + "px";
-        });
-
-    
+        });    
     </script>
 </body>
 </html>
